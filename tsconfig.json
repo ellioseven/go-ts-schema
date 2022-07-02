@@ -1,0 +1,13 @@
+{
+  "include": ["out/ts/model/*.ts"],
+  "compilerOptions": {
+    "outDir": "out/ts/dist",
+    "declaration": true,
+    "module": "commonjs",
+    "strict": true,
+    "target": "esnext",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  }
+}

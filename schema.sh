@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+docker-compose run --rm node yarn install
+
 docker-compose run --rm oapi generate \
     -i /local/schema.yml \
     -g go \
@@ -18,3 +20,4 @@ docker-compose run --rm oapi generate \
     --global-property models
 
 docker-compose run --rm node npx -y prettier ./out/ts -w
+docker-compose run --rm node yarn build
