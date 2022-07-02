@@ -1,0 +1,21 @@
+version: "2.2"
+services:
+  node:
+    image: node:16-alpine
+    working_dir: /srv
+    stdin_open: true
+    environment:
+      PATH: /srv/node_modules/.bin:$PATH
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/srv
+  go:
+    image: golang:1.18
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+  oapi:
+    image: openapitools/openapi-generator-cli
+    volumes:
+      - ./:/local
