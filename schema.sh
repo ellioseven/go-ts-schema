@@ -15,9 +15,8 @@ docker-compose run --rm go go fmt ./out/go
 docker-compose run --rm oapi generate \
     -i /local/schema.yml \
     -g typescript-node \
-    -o /local/out/ts \
-    -t /local/schema/templates/ts \
-    --global-property models
+    -o /local/out/ts/out \
+    -t /local/schema/templates/ts
 
 docker-compose run --rm node npx -y prettier ./out/ts -w
 docker-compose run --rm node yarn build

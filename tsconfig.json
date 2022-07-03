@@ -1,5 +1,5 @@
 {
-  "include": ["out/ts/model/*.ts"],
+  "include": ["out/ts/out"],
   "compilerOptions": {
     "outDir": "out/ts/dist",
     "declaration": true,
